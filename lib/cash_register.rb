@@ -1,14 +1,16 @@
 class CashRegister
   
-  attr_accessor :total, :discount, :items
+  attr_accessor :total, :discount, :items, :last_item
   
   def initialize(discount = nil)
     @total = 0
     @discount = discount
     @items = []
+    @last_item = []
   end
   
   def add_item(title, price, quantity = 1)
+    
     self.items.concat([title] * quantity)
     self.total += price * quantity
   end
@@ -21,6 +23,10 @@ class CashRegister
     else
       "There is no discount to apply."
     end
+  end
+  
+  def void_last_transaction
+    
   end
   
   
