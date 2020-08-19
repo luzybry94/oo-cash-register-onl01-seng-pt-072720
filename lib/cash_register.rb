@@ -15,6 +15,7 @@ class CashRegister
     if self.discount != nil
     discount = self.discount * 10
     self.total -= discount
+    puts 
   end
   
 
