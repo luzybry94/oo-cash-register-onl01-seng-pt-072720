@@ -15,7 +15,9 @@ class CashRegister
     if self.discount != nil
     discount = self.discount * 10
     self.total -= discount
-    puts 
+      "After the discount, the total comes to $#{self.total}."
+    else
+      
   end
   
 
