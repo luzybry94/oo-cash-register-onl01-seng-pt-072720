@@ -9,15 +9,14 @@ class CashRegister
   end
   
   def add_item(title, price, quantity = 1)
-    self.last_item = price * quantity
-    self.items.concat([title] * quantity)
     self.total += price * quantity
+    self.items.concat([title] * quantity)
+    self.last_item = price * quantity
   end
   
   def apply_discount
     if self.discount != nil
-    discount = self.discount * 10
-    self.total -= discount
+    self.total -= self.discount * 10
       "After the discount, the total comes to $#{self.total}."
     else
       "There is no discount to apply."
