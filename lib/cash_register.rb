@@ -9,7 +9,7 @@ class CashRegister
   end
   
   def add_item(title, price, quantity = 1)
-    self.items.concat(title *
+    self.items << title 
     self.total += price * quantity
   end
   
