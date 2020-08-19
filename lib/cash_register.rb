@@ -12,7 +12,9 @@ class CashRegister
   end
   
   def apply_discount
-    
+    if self.discount != nil
+    discount = self.discount * 10
+    self.total -= discount
   end
   
 
