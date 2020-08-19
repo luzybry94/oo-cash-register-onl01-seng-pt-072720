@@ -6,11 +6,11 @@ class CashRegister
     @total = 0
     @discount = discount
     @items = []
-    @last_item = []
+    @last_item = nil
   end
   
   def add_item(title, price, quantity = 1)
-    self.last_item = self
+    self.last_item = price
     self.items.concat([title] * quantity)
     self.total += price * quantity
   end
